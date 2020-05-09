@@ -1,0 +1,28 @@
+<mat-nav-list>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+      <mat-icon>settings_input_svideo</mat-icon>
+      Dashboard</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/map">
+      <mat-icon>map</mat-icon>
+      Map
+    </a>
+    <a *ngIf="isAdmin()" mat-list-item routerLinkActive="list-item-active" routerLink="/device">
+      <mat-icon>settings_remote</mat-icon>
+      Device
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <h2 *ngIf="isAdmin()" matSubheader>Tools</h2>
+
+    <a *ngIf="isAdmin()" mat-list-item routerLinkActive="list-item-active" routerLink="/setting">
+        <mat-icon>build</mat-icon>
+        Setting
+    </a>
+
+    <a *ngIf="isAdmin()" mat-list-item routerLinkActive="list-item-active" routerLink="/users">
+        <mat-icon>people</mat-icon>
+        Users
+    </a>
+
+</mat-nav-list>

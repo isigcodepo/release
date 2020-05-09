@@ -1,0 +1,30 @@
+<mat-card fxFlex="40">
+  <h4>Map Preferences</h4>
+  <div class="container">
+    <form class="mat-dialog-content" (ngSubmit)="submit()" #formControl="ngForm">
+      <div class="form">
+          <label>[0-20] : </label>
+          <input [(colorPicker)]="color1" [style.background]="color1" ngModel name="rangeone"/>
+      </div><br>
+      <div class="form">
+        <label>[0-20] : </label>
+        <input [(colorPicker)]="color2" [style.background]="color2" ngModel name="rangetwo"/>
+      </div><br>
+      <div class="form">
+        <label>[0-20] : </label>
+        <input [(colorPicker)]="color3" [style.background]="color3" ngModel name="rangethree"/>
+      </div><br>
+      <div class="form">
+        <label>[0-20] : </label>
+        <input [(colorPicker)]="color4" [style.background]="color4" ngModel name="rangefour"/>
+      </div><br>
+      <div class="form">
+        <label>[0-20] : </label>
+        <input [(colorPicker)]="color5" [style.background]="color5" ngModel name="rangefive"/>
+      </div><br>
+      <div mat-dialog-actions>
+        <button mat-raised-button (click)="confirmAdd(formControl.value)" color="primary">Save</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

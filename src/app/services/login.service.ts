@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {JwtHelperService} from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
+import { Constants } from './constant/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = Constants.baseLink;
   jwt: string;
   username: string;
   user: Usern;

@@ -23,6 +23,8 @@ import { DetailDeviceComponent } from 'src/app/dialog/detail-device/detail-devic
 import { FusionChartsModule } from 'angular-fusioncharts';
 import { PreferenceComponent } from 'src/app/modules/preference/preference.component';
 import { ColorPickerModule } from 'ngx-color-picker';
+import { RxStompService } from '@stomp/ng2-stompjs';
+import { ProgressWebsocketService } from 'src/app/services/progress.websocket.service';
 
 
 @NgModule({
@@ -73,7 +75,9 @@ import { ColorPickerModule } from 'ngx-color-picker';
     DetailDeviceComponent,
   ],
   providers: [
-    DashboardService
+    DashboardService,
+    ProgressWebsocketService,
+    RxStompService
   ]
 })
 export class DefaultModule { }

@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Constants } from './constant/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private baseUrl = 'http://localhost:8080/test';
+  private baseUrl = Constants.baseUrl;
   constructor(private http: HttpClient) {  }
 
   getUser(id: number): Observable<any> {

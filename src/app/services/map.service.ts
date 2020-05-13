@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Measure } from '../modules/map/map.component';
-import { Observable } from 'rxjs';
-import {map} from 'rxjs/operators';
+import { Constants } from './constant/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MapService {
-  private baseUrl = 'http://localhost:8080/test';
+  private baseUrl = Constants.baseUrl;
   constructor(private http: HttpClient) { }
 
   getActualMeasuresList1() {

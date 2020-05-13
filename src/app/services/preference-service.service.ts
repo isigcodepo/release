@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Constants } from './constant/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PreferenceServiceService {
-  private baseUrl = 'http://localhost:8080/test';
+  private baseUrl = Constants.baseUrl;
 
   constructor(private http: HttpClient) {  }
 

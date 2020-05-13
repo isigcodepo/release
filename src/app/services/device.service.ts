@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Constants } from './constant/constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeviceService {
-  private baseUrl = 'http://localhost:8080/test';
+  private baseUrl = Constants.baseUrl;
   constructor(private http: HttpClient) {  }
 
   getDevice(id: number): Observable<any> {

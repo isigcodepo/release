@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   }
   openSnackBar() {
     this.snackBar.open('login failed ! please retry', 'dismiss', {
-      duration: 5000,
+      //duration: 15000,
       verticalPosition: 'top'
     });
   }

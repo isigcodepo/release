@@ -15,6 +15,11 @@
 
     <h2 *ngIf="isAdmin()" matSubheader>Tools</h2>
 
+    <a *ngIf="isAdmin()" mat-list-item routerLinkActive="list-item-active" routerLink="/command">
+      <mat-icon>router</mat-icon>
+      Command
+    </a>
+
     <a *ngIf="isAdmin()" mat-list-item routerLinkActive="list-item-active" routerLink="/setting">
         <mat-icon>build</mat-icon>
         Setting

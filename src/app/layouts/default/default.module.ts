@@ -25,6 +25,11 @@ import { PreferenceComponent } from 'src/app/modules/preference/preference.compo
 import { ColorPickerModule } from 'ngx-color-picker';
 import { RxStompService } from '@stomp/ng2-stompjs';
 import { ProgressWebsocketService } from 'src/app/services/progress.websocket.service';
+import { CommandComponent } from 'src/app/modules/command/command.component';
+import { AddCommandComponent } from 'src/app/dialog/add-command/add-command.component';
+import { EditCommandComponent } from 'src/app/dialog/edit-command/edit-command.component';
+import { DeleteCommandComponent } from 'src/app/dialog/delete-command/delete-command.component';
+import { SendCommandComponent } from 'src/app/dialog/send-command/send-command.component';
 
 
 @NgModule({
@@ -34,6 +39,7 @@ import { ProgressWebsocketService } from 'src/app/services/progress.websocket.se
     PostsComponent,
     MapComponent,
     DeviceComponent,
+    CommandComponent,
     SettingComponent,
     UsersComponent,
     PreferenceComponent,
@@ -44,6 +50,10 @@ import { ProgressWebsocketService } from 'src/app/services/progress.websocket.se
     EditUserDialogComponentComponent,
     DeleteUserDialogComponentComponent,
     DetailDeviceComponent,
+    AddCommandComponent,
+    EditCommandComponent,
+    DeleteCommandComponent,
+    SendCommandComponent
   ],
   imports: [
     CommonModule,
@@ -73,6 +83,10 @@ import { ProgressWebsocketService } from 'src/app/services/progress.websocket.se
     EditUserDialogComponentComponent,
     DeleteUserDialogComponentComponent,
     DetailDeviceComponent,
+    AddCommandComponent,
+    EditCommandComponent,
+    DeleteCommandComponent,
+    SendCommandComponent
   ],
   providers: [
     DashboardService,

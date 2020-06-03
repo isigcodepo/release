@@ -5,12 +5,15 @@ import { EditDeviceDialogComponent } from 'src/app/dialog/edit-device-dialog/edi
 import { DeleteDeviceDialogComponent } from 'src/app/dialog/delete-device-dialog/delete-device-dialog.component';
 import { DeviceService } from 'src/app/services/device.service';
 import { DOCUMENT } from '@angular/common';
+import { SendCommandComponent } from 'src/app/dialog/send-command/send-command.component';
 
 export interface Device {
   id: number;
   externalId: string;
   identity: string;
   designation: string;
+  command:number;
+  value: string;
 }
 
 @Component({
@@ -73,6 +76,19 @@ export class DeviceComponent implements OnInit {
     this.index = i;
     this.id = id;
     const dialogRef = this.dialog.open(DeleteDeviceDialogComponent, {
+      data: {id: id, identity: identity, externalId: externalId, designation: designation}
+    });
+
+     dialogRef.afterClosed().subscribe(result => {
+      if (result === 1) {
+       // this.document.location.reload();
+      }
+    });
+  }
+  sendCommand(i: number, id: number, identity: string, externalId: string, designation: string){
+    this.index = i;
+    this.id = id;
+    const dialogRef = this.dialog.open(SendCommandComponent, {
       data: {id: id, identity: identity, externalId: externalId, designation: designation}
     });
 

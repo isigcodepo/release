@@ -49,7 +49,7 @@ export class DefaultComponent implements OnInit {
     }
   }
 
-  sideBarToggler() {
+  sideBarToggler($event) {
     this.sideBarOpen = !this.sideBarOpen;
   }
   isAdmin() {

@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'dashboard';
+export class AppComponent implements OnInit{
+  title = 'monitor0-engine';
+  ngOnInit(): void {
+    setTimeout(this.logout, 1000000);
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
+    localStorage.removeItem('user');
+    localStorage.removeItem('prefs');
+  }
 }

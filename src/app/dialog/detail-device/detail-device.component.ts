@@ -10,15 +10,13 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
   styleUrls: ['./detail-device.component.scss']
 })
 export class DetailDeviceComponent implements OnInit {
-  level: number;
-  constructor(public dialogRef: MatDialogRef<DetailDeviceComponent>,
+  ngOnInit() {
+  }
+   /* constructor(public dialogRef: MatDialogRef<DetailDeviceComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Measure,
-    public mapService: MapService,private dashboardService: DashboardService) { }
-    ngOnInit() {
-      this.level=this.data.tension;
-    }
+    public mapService: MapService) { }
 
-    dataSource = {
+    dataSource= {
       "chart": {
           "caption": "Battery Level",
           "lowerLimit": "0",
@@ -44,10 +42,11 @@ export class DetailDeviceComponent implements OnInit {
           }]
       },
       "dials": {
+
             "dial": [{
-                "value": `${this.level}`
+                value: this.data.tension
             }]
       }
-    }
+    } */
 
 }

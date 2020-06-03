@@ -17,6 +17,7 @@ import * as Widgets from 'fusioncharts/fusioncharts.Widgets';
 
 // Load FusionTheme Theme
 import * as FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+import { SendCommandComponent } from './dialog/send-command/send-command.component';
 
 // Add dependencies to FusionChartsModule
 FusionChartsModule.fcRoot(FusionCharts, Widgets, FusionTheme);

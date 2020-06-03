@@ -5,7 +5,6 @@ import { MapService }  from 'src/app/services/map.service';
 import { Device } from '../device/device.component';
 import { MatDialog } from '@angular/material';
 import { DetailDeviceComponent } from 'src/app/dialog/detail-device/detail-device.component';
-import { AddDeviceDialogComponent } from 'src/app/dialog/add-device-dialog/add-device-dialog.component';
 
 export class Measure {
   id: number;

@@ -10,6 +10,7 @@ import {UsersComponent} from './modules/users/users.component';
 import {FullwidthComponent} from './layouts/fullwidth/fullwidth.component';
 import {LoginComponent} from './modules/login/login.component';
 import { PreferenceComponent } from './modules/preference/preference.component';
+import { CommandComponent } from './modules/command/command.component';
 
 const routes: Routes = [{
   path: '',
@@ -35,6 +36,9 @@ const routes: Routes = [{
   },{
     path: 'preferences',
     component: PreferenceComponent
+  },{
+    path: 'command',
+    component: CommandComponent
   }]
 },{
   path: '',

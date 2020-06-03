@@ -40,7 +40,7 @@ export class AreaComponent implements OnInit {
     },
     yAxis: {
         title: {
-            text: 'Snow depth (m)'
+            text: 'Battry %'
         },
         min: 0
     },

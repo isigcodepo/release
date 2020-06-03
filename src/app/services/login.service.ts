@@ -35,6 +35,7 @@ export class LoginService {
     let objJWT = jwtHelper.decodeToken(this.jwt);
     this.username = objJWT.sub;
     this.user = objJWT.sub;
+    //console.log(objJWT.exp.toDate());
     localStorage.setItem('username', objJWT.sub);
     this.roles = objJWT.roles;
     this.loadPreferences().subscribe(r => {
@@ -62,7 +63,7 @@ export class LoginService {
     localStorage.removeItem('username');
     localStorage.removeItem('user');
     localStorage.removeItem('prefs');
-     this.initParams();
+    this.initParams();
   }
   initParams(){
     this.jwt=undefined;

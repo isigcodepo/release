@@ -10,7 +10,7 @@ import { DeleteCommandComponent } from 'src/app/dialog/delete-command/delete-com
 
 export interface Command {
   id: number;
-  commaand: string;
+  command: string;
   description: string;
 }
 
@@ -50,35 +50,34 @@ export class CommandComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result === 1) {
         // After dialog is closed we're doing frontend updates
-        this.document.location.reload();
+       this.getAllCommands();
       }
     });
   }
-  startEdit(i: number, id: number, identity: string, externalId: string, designation: string){
+  startEdit(i: number, id: number, command: string, description: string){
     this.id = id;
     // index row is used just for debugging proposes and can be removed
     this.index = i;
-    console.log(this.index);
     const dialogRef = this.dialog.open(EditCommandComponent, {
-      data: {id: id, identity: identity, externalId: externalId, designation: designation}
+      data: {id: id, command: command, description: description}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       if (result === 1) {
-        this.document.location.reload();
+        this.getAllCommands();
       }
     });
   }
-  deleteItem(i: number, id: number, identity: string, externalId: string, designation: string){
+  deleteItem(i: number, id: number, command: string, description: string){
     this.index = i;
     this.id = id;
     const dialogRef = this.dialog.open(DeleteCommandComponent, {
-      data: {id: id, identity: identity, externalId: externalId, designation: designation}
+      data: {id: id, command: command, description: description}
     });
 
      dialogRef.afterClosed().subscribe(result => {
       if (result === 1) {
-       // this.document.location.reload();
+        this.getAllCommands();
       }
     });
   }

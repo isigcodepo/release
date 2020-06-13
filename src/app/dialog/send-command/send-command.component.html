@@ -1,11 +1,11 @@
 <div class="container">
-  <h5 mat-dialog-title>Add new Device</h5>
+  <h5 mat-dialog-title>Send Command to Device</h5>
 
   <form class="mat-dialog-content" (ngSubmit)="submit()" #formControl="ngForm">
 
     <div class="form">
       <mat-form-field color="primary">
-        <input matInput placeholder="ExternalID" disabled [(ngModel)]="data.externalId" name="externalId">
+        <input matInput placeholder="Identity" disabled [(ngModel)]="data.identity" name="externalId">
       </mat-form-field>
     </div>
 
@@ -19,7 +19,7 @@
       <mat-form-field color="primary">
           <mat-label>Command</mat-label>
           <mat-select required name="command" [(ngModel)]="data.command">
-            <mat-option value="automode">Automode</mat-option>
+            <mat-option *ngFor="let com of commands" [value]=com.command>{{com.command}}</mat-option>
           </mat-select>
         </mat-form-field>
     </div>

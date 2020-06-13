@@ -77,6 +77,7 @@ import { SendCommandComponent } from 'src/app/dialog/send-command/send-command.c
       ],
   entryComponents: [
     AddDeviceDialogComponent,
+    AddUserDialogComponentComponent,
     EditDeviceDialogComponent,
     DeleteDeviceDialogComponent,
     AddUserDialogComponentComponent,

@@ -14,16 +14,16 @@ export class CommandServiceService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  createCommand(device: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}/commands`, device);
+  createCommand(command: Object): Observable<Object> {
+    return this.http.post(`${this.baseUrl}/commands`, command);
   }
 
-  updateCommand(device: Object): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/commands`, device);
+  updateCommand(command: Object): Observable<Object> {
+    return this.http.put(`${this.baseUrl}/commands`, command);
   }
 
-  deleteCommand(device: Object): Observable<any> {
-      return this.http.delete(`${this.baseUrl}/commands`,);
+  deleteCommand(command: Object): Observable<any> {
+      return this.http.delete(`${this.baseUrl}/commands`,command);
   }
 
   getCommandsList() {
